@@ -1,104 +1,108 @@
 # MiraCommander 🚀
 
-> **Orthodoxer Dual-Pane Dateimanager (inspiriert vom legendären Norton Commander)**  
-> Entwickelt mit modernster Web- & Native-Technologie: **Tauri 2**, **Rust** und **TypeScript**.
+> **A classic dual-pane file manager inspired by the legendary Norton Commander**
+> Built with modern web and native technologies: **Tauri 2**, **Rust**, and **TypeScript**.
 
-👤 **Autor & Entwickler:** Kemal Akçocuk  
-📄 **Lizenz:** MIT License (Open Source)
+👤 **Author and developer:** Kemal Akçocuk
+
+📄 **License:** MIT License (open source)
 
 ---
 
-## 🌟 Plattformunabhängig (Cross-Platform)
+## 🌟 Cross-platform
 
-MiraCommander ist vollständig **plattformunabhängig** ausgelegt und läuft nativ auf:
-- 🐧 **Linux** (Debian, Ubuntu, Fedora, Arch etc. als `.deb`, `.rpm`, `AppImage`)
-- 🪟 **Windows** (Windows 10 / 11 als `.msi`, `.exe`)
-- 🍏 **macOS** (Apple Silicon M1/M2/M3 & Intel als `.dmg`, `.app`)
+MiraCommander is designed to be **cross-platform** and runs natively on:
+- 🐧 **Linux** (Debian, Ubuntu, Fedora, Arch, and more; `.deb`, `.rpm`, `AppImage`)
+- 🪟 **Windows** (Windows 10 / 11; `.msi`, `.exe`)
+- 🍏 **macOS** (Apple silicon M1/M2/M3 and Intel; `.dmg`, `.app`)
 
-### Plattform-Spezifika sauber gelöst:
-- **Pfade & Separatoren:** Saubere Unterstützung von Windows-Backslashes `\` und Unix `/` mit universeller Erkennung.
-- **Laufwerkserkennung:** Automatische Erkennung aller Windows-Laufwerksbuchstaben (`C:\`, `D:\`, ...) sowie Unix-Mountpoints (`/`, `/mnt`, `/media`, `/Volumes`, `/home`).
-- **Speicherplatzermittlung:** Plattformübergreifend mit `fs4` für Windows-, Linux- und macOS-Dateisysteme.
-- **Versteckte Dateien:** Sowohl Unix Dot-Dateien (`.filename`) als auch Windows Dateiattribute (`FILE_ATTRIBUTE_HIDDEN`).
-- **Rechte & Symlinks:** Plattformgerechtes Handling für Symlinks und Berechtigungen.
-- **System-Verknüpfungen:** Dateien mit Standardanwendungen öffnen via nativer OS-Integration (`opener`).
+### Platform-specific details
+- **Paths and separators:** Handles Windows backslashes `\` and Unix-style `/` paths with automatic detection.
+- **Drive detection:** Automatically detects Windows drive letters (`C:\`, `D:\`, ...) and Unix mount points (`/`, `/mnt`, `/media`, `/Volumes`, `/home`).
+- **Disk space:** Cross-platform disk space detection for Windows, Linux, and macOS filesystems using `fs4`.
+- **Hidden files:** Supports both Unix dotfiles (`.filename`) and the Windows `FILE_ATTRIBUTE_HIDDEN` attribute.
+- **Permissions and symlinks:** Handles symlinks and permissions according to each platform.
+- **System associations:** Opens files with their default applications through native OS integration (`opener`).
 
 ---
 
 ## ✨ Features
 
-- **Zwei-Fenster-Ansicht (Dual-Pane):** Blitzschnelle Navigation per Tastatur (`Tab`, Pfeiltasten, `Enter`, `..`).
-- **Norton Commander Funktionsleiste:**
-  - `F1` Hilfe & Tastaturübersicht
-  - `F2` Benutzermenü (Systembefehle wie git status, df, etc.)
-  - `F3` Viewer (Textdateien & universeller Bildbetrachter)
-  - `F4` Editor (mit Speichern und Dirty-Check vor Schließen)
-  - `Shift+F4` Neue Datei anlegen & direkt bearbeiten
-  - `F5` Kopieren mit Live-Fortschritt, Häkchen `✓` und Konfliktdialog (Skip / Overwrite / Cancel)
-  - `F6` Verschieben / Bewegen
-  - `Shift+F6` Datei oder Verzeichnis umbenennen
-  - `F7` Neues Verzeichnis anlegen
-  - `F8` Löschen mit Sicherheitsabfrage
-  - `F9` Norton Commander Pulldown-Menü (Links / Dateien / Befehle / Rechts)
-  - `F10` Beenden
-- **Kommandozeile & History:**
-  - Eingabezeile unten direkt im aktuellen Arbeitsverzeichnis.
-  - `Strg + Enter`: Dateiname in Befehlszeile übernehmen.
-  - `Alt + F8` & Pfeiltasten: Befehlsverlauf durchblättern.
-- **Schnellansicht (Quick View - Strg+Q):**
-  - Schnelle Datei- oder Bildvorschau direkt im Gegenfenster.
+- **Dual-pane view:** Fast keyboard navigation with `Tab`, the arrow keys, `Enter`, and `..`.
+- **Norton Commander function keys:**
+  - `F1` Help and keyboard shortcuts
+  - `F2` User menu (system commands such as `git status`, `df`, etc.)
+  - `F3` Viewer for text files and images
+  - `F4` Editor with save support and unsaved-change checks before closing
+  - `Shift+F4` Create and edit a new file
+  - `F5` Copy with live progress, a `✓` indicator, and conflict options (Skip / Overwrite / Cancel)
+  - `F6` Move files or folders
+  - `Shift+F6` Rename a file or folder
+  - `F7` Create a folder
+  - `F8` Delete with a confirmation prompt
+  - `F9` Norton Commander pull-down menu (Left / Files / Commands / Right)
+  - `F10` Quit
+- **Command line and history:**
+  - A command input line at the bottom, rooted in the current working directory.
+  - `Ctrl + Enter`: Insert the selected filename into the command line.
+  - `Alt + F8` and the arrow keys: Browse command history.
+- **Quick View (`Ctrl+Q`):**
+  - Preview files and images directly in the opposite pane.
 - **Universal Image Viewer:**
-  - Unterstützt PNG, JPG, GIF, WebP, SVG, BMP, ICO, TIFF, TGA, AVIF, HDR, QOI, PNM, DDS etc.
-  - Mit stufenlosem Zoom, Bild-Pan per Maus, Rotation (↺/↻) und Pfeiltasten-Navigation.
-- **Archiv-Funktionen:**
-  - `Alt + F5`: Markierte Dateien direkt in ZIP packen (inkl. Zip64 für Dateien > 4 GB).
-  - `Alt + F6`: ZIP-Dateien sicher entpacken (mit Zip-Slip-Schutz).
-- **Dateisuche (Alt+F7):**
-  - Rekursive Suche mit Masken (`*.rs`, `test*`, etc.) und optionaler Volltextsuche in Inhalten.
-- **Verzeichnisvergleich (Strg+D):**
-  - Findet und markiert Unterschiede zwischen linkem und rechtem Panel.
+  - Supports PNG, JPG, GIF, WebP, SVG, BMP, ICO, TIFF, TGA, AVIF, HDR, QOI, PNM, DDS, and more.
+  - Smooth zoom, mouse panning, rotation (↺/↻), and arrow-key navigation.
+- **Archive tools:**
+  - `Alt + F5`: Pack selected files into a ZIP archive, including Zip64 support for files over 4 GB.
+  - `Alt + F6`: Safely extract ZIP archives with Zip Slip protection.
+- **File search (`Alt+F7`):**
+  - Recursive search using patterns (`*.rs`, `test*`, etc.), with optional full-text search inside files.
+- **Directory comparison (`Ctrl+D`):**
+  - Find and highlight differences between the left and right panes.
 
 ---
 
-## 🛠️ Entwicklung & Build
+## 🛠️ Development and build
 
-### Voraussetzungen
-1. [Node.js](https://nodejs.org/) (Version 18 oder neuer)
-2. [Rust & Cargo](https://rustup.rs/) (aktuelle Stable-Version)
-3. Plattform-Abhängigkeiten für Tauri 2:
+### Prerequisites
+1. [Node.js](https://nodejs.org/) (version 18 or later)
+2. [Rust and Cargo](https://rustup.rs/) (latest stable version)
+3. Tauri 2 platform dependencies:
    - **Linux:** `sudo apt install libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf libgtk-3-dev`
-   - **Windows:** Microsoft C++ Build Tools & WebView2
+   - **Windows:** Microsoft C++ Build Tools and WebView2
    - **macOS:** Xcode Command Line Tools
 
-### Starten im Entwicklungsmodus
+### Run in development mode
 ```bash
 npm install
 npm run tauri dev
 ```
 
-### Produktions-Build erstellen
+### Create a production build
 ```bash
 npm run tauri build
 ```
-Die fertigen Installationspakete liegen anschließend in:
-- Linux: `src-tauri/target/release/bundle/deb/` bzw. `appimage/`
+The resulting installers are placed in:
+- Linux: `src-tauri/target/release/bundle/deb/` or `appimage/`
 - Windows: `src-tauri/target/release/bundle/msi/`
 - macOS: `src-tauri/target/release/bundle/dmg/`
 
 ---
 
-## 📦 Automatischer Multiplatform-Release über GitHub Actions
+## 📦 Automated multi-platform releases with GitHub Actions
 
-Im Repository ist unter `.github/workflows/release.yml` eine automatisierte CI/CD-Pipeline eingerichtet.  
-Sobald ein Tag gepusht wird (z. B. `git tag v0.2.0 && git push origin v0.2.0`), baut GitHub Actions automatisch:
-- **Windows Executable & Installer** (`.exe` / `.msi`)
-- **macOS Universal Binary & Disk Image** (`.dmg` für Apple Silicon & Intel)
-- **Linux Pakete** (`.deb`, `.AppImage`)
-und hängt diese direkt an das GitHub-Release an!
+An automated CI/CD pipeline is configured in `.github/workflows/release.yml`.
+
+When you push a tag (for example, `git tag v0.2.0 && git push origin v0.2.0`), GitHub Actions automatically builds:
+- **Windows executables and installers** (`.exe` / `.msi`)
+- **macOS universal binaries and disk images** (`.dmg` for Apple silicon and Intel)
+- **Linux packages** (`.deb`, `.AppImage`)
+
+The generated files are attached to the GitHub release.
 
 ---
 
-## 📜 Lizenz
+## 📜 License
 
-Dieses Projekt ist unter der **MIT License** lizenziert – frei verwendbar, erweiterbar und Open Source.  
+This project is licensed under the **MIT License** and is free to use and modify.
+
 Copyright (c) Kemal Akçocuk.
