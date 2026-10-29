@@ -1,7 +1,12 @@
-# MiraCommander 🚀
+# MiraCommander
 
-> **A classic dual-pane file manager inspired by the legendary Norton Commander**
-> Built with modern web and native technologies: **Tauri 2**, **Rust**, and **TypeScript**.
+**A modern, keyboard-first dual-pane file manager inspired by Norton Commander.**
+
+Built with **Rust, Tauri 2 and TypeScript**, MiraCommander combines classic function-key workflows with a modern desktop interface.
+
+[Explore features](#-features) · [Build from source](#️-development-and-build) · [Report a bug](https://github.com/OlgunBeyaz/MiraCommander/issues) · [Releases](https://github.com/OlgunBeyaz/MiraCommander/releases)
+
+> **Availability:** Check the [Releases page](https://github.com/OlgunBeyaz/MiraCommander/releases) for published installers. Platform and package support described below is a project target and may depend on the current build.
 
 👤 **Author and developer:** Kemal Akçocuk
 
@@ -15,7 +20,7 @@
 
 ## 🌟 Cross-platform
 
-MiraCommander is designed to be **cross-platform** and runs natively on:
+MiraCommander is designed for **cross-platform** desktop use. Planned build targets include:
 - 🐧 **Linux** (Debian, Ubuntu, Fedora, Arch, and more; `.deb`, `.rpm`, `AppImage`)
 - 🪟 **Windows** (Windows 10 / 11; `.msi`, `.exe`)
 - 🍏 **macOS** (Apple silicon M1/M2/M3 and Intel; `.dmg`, `.app`)
@@ -94,7 +99,7 @@ The resulting installers are placed in:
 
 ## 📦 Automated multi-platform releases with GitHub Actions
 
-An automated CI/CD pipeline is configured in `.github/workflows/release.yml`.
+The project documents an automated CI/CD pipeline at `.github/workflows/release.yml`. Verify the workflow and its latest run before relying on downloadable artifacts.
 
 When you push a tag (for example, `git tag v0.2.0 && git push origin v0.2.0`), GitHub Actions automatically builds:
 - **Windows executables and installers** (`.exe` / `.msi`)
@@ -110,3 +115,11 @@ The generated files are attached to the GitHub release.
 This project is licensed under the **MIT License** and is free to use and modify.
 
 Copyright (c) Kemal Akçocuk.
+
+## 🤝 Feedback and contributions
+
+MiraCommander is under active development. If you encounter a problem, [open an issue](https://github.com/OlgunBeyaz/MiraCommander/issues) and include your operating system, application version, reproduction steps, and any relevant logs. Feature suggestions and pull requests are welcome.
+
+## 🔗 Mira software projects
+
+Also by this developer: [mdedit](https://github.com/OlgunBeyaz/mdedit), [DLL Export Viewer](https://github.com/OlgunBeyaz/dll-export), and [Homebrew App Store](https://github.com/OlgunBeyaz/Homebrew-App-Store).
