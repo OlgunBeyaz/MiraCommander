@@ -7,6 +7,10 @@
 
 📄 **License:** MIT License (open source)
 
+## 📸 Screenshot
+
+![MiraCommander application screenshot](screenshot.png)
+
 ---
 
 ## 🌟 Cross-platform
