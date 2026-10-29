@@ -1,0 +1,63 @@
+{
+  "app": {
+    "title": "MiraFileSync",
+    "subtitle": "Yerel klasörleri senkronize et",
+    "info": "Bilgi",
+    "about": "MiraFileSync Hakkında"
+  },
+  "menu": {
+    "language": "Dil"
+  },
+  "folders": {
+    "left_label": "Sol klasör (kaynak)",
+    "right_label": "Sağ klasör (hedef)"
+  },
+  "sync": {
+    "mode_label": "Senkron mod:",
+    "update": "Güncelle (sol → sağ)",
+    "mirror": "Ayna (sol → sağ + sil)",
+    "preview": "Önizleme",
+    "creating_plan": "Plan oluşturuluyor...",
+    "run": "Senkron çalıştır",
+    "running": "Senkron çalışıyor..."
+    ,"copy": "Kopyala",
+    "delete": "Sil",
+    "skip": "Atla"
+  },
+  "status": {
+    "scanning": "Klasörler taranıyor...",
+    "scan_complete": "✅ Klasörler aynı",
+    "scan_failed": "❌ Tarama başarısız",
+    "preview_none": "Önizleme için veri yok — önce Karşılaştır çalıştırın",
+    "no_data": "Veri yok — önce Karşılaştır çalıştırın"
+  },
+  "messages": {
+    "select_both": "Lütfen her iki klasörü seçin",
+    "scan_started": "Taranıyor: {left} ↔ {right}",
+    "scan_results": "Tarama tamamlandı: {count} öğe bulundu",
+    "plan_summary": "Önizleme: {copy} kopya, {delete} silme",
+    "plan_created": "Plan oluşturuldu: {copy} kopya, {delete} silme",
+    "auto_plan": "Senkron planı otomatik olarak oluşturuluyor..."
+  },
+  "result": {
+    "title": "Sonuç",
+    "success": "Başarılı",
+    "errors": "Hatalar"
+  },
+  "progress": {
+    "scanning": "Taranıyor...",
+    "planning": "Planlanıyor...",
+    "syncing": "Senkronize ediliyor..."
+  },
+  "diff": {
+    "results": "Fark Sonuçları"
+  },
+  "about": {
+    "version": "Sürüm {v}",
+    "description": "Yerel klasör senkronizasyonu",
+    "built_with": "İle oluşturuldu:",
+    "license": "MIT Lisansı",
+    "copyright": "© 2024–2026 Kemal Akçocuk",
+    "all_rights": "Tüm hakları saklıdır."
+  }
+}

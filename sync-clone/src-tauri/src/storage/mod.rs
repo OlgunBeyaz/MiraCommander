@@ -1,0 +1,1 @@
+// Für spätere SQLite-Persistenz

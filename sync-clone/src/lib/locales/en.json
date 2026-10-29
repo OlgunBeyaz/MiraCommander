@@ -1,0 +1,63 @@
+{
+  "app": {
+    "title": "MiraFileSync",
+    "subtitle": "Synchronize local folders",
+    "info": "Info",
+    "about": "About MiraFileSync"
+  },
+  "menu": {
+    "language": "Language"
+  },
+  "folders": {
+    "left_label": "Left folder (source)",
+    "right_label": "Right folder (target)"
+  },
+  "sync": {
+    "mode_label": "Sync mode:",
+    "update": "Update (left → right)",
+    "mirror": "Mirror (left → right + delete)",
+    "preview": "Preview",
+    "creating_plan": "Creating plan...",
+    "run": "Run Sync",
+    "running": "Sync running..."
+    ,"copy": "Copy",
+    "delete": "Delete",
+    "skip": "Skip"
+  },
+  "status": {
+    "scanning": "Scanning folders...",
+    "scan_complete": "✅ Folders are identical",
+    "scan_failed": "❌ Scan failed",
+    "preview_none": "No data for preview — run Compare first",
+    "no_data": "No data — run Compare first"
+  },
+  "messages": {
+    "select_both": "Please select both folders",
+    "scan_started": "Scanning: {left} ↔ {right}",
+    "scan_results": "Scan complete: {count} entries found",
+    "plan_summary": "Preview: {copy} copy, {delete} delete",
+    "plan_created": "Plan created: {copy} copies, {delete} deletions",
+    "auto_plan": "Creating sync plan automatically..."
+  },
+  "result": {
+    "title": "Result",
+    "success": "Successful",
+    "errors": "Errors"
+  },
+  "progress": {
+    "scanning": "Scanning...",
+    "planning": "Planning...",
+    "syncing": "Synchronizing..."
+  },
+  "diff": {
+    "results": "Diff Results"
+  },
+  "about": {
+    "version": "Version {v}",
+    "description": "Local folder synchronization",
+    "built_with": "Built with:",
+    "license": "MIT License",
+    "copyright": "© 2024–2026 Kemal Akçocuk",
+    "all_rights": "All rights reserved."
+  }
+}
